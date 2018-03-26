@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Demo-test</groupId>
+  <artifactId>kerr</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>kerr</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.9</maven.compiler.source>
+	<maven.compiler.target>1.9</maven.compiler.target>
+  </properties>
+  
+<!--  配置pom文件打开对应TestCase的两中方法  -->
+
+<!-- method1  -->
+   <build>
+<!--    <defaultGoal>compile</defaultGoal> -->
+ 	<plugins>
+ 		<plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12.4</version>
+        <configuration>
+          <excludes>
+           	<exclude>
+           	.......
+           	</exclude>
+          </excludes>
+<!--           多线程运行测试用例 -->
+          <!-- <parallel>methods</parallel>
+          <threadCount>2</threadCount> -->
+          
+          <sureXmlFiles>
+          	<sureXmlFile>
+          		${project.basedir}\src\test\java\test1\Test_login.xml
+          	</sureXmlFile>
+
+          	<sureXmlFile>
+          		
+          	</sureXmlFile>
+          	
+          </sureXmlFiles>
+        </configuration>
+      </plugin> 
+ 	</plugins>
+ </build>
+ 
+ 
+<!-- method2  -->
+<!-- <build>
+    <plugins>
+ 	  <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12.4</version>
+        <configuration>
+			<includes>
+				<include>
+					test1/Test_login.java
+				</include>
+			</includes>
+        </configuration>
+      </plugin> 
+ 	</plugins>
+</build> -->
+  
+  
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-java</artifactId>
+		<version>3.8.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>6.10</version>
+		<scope>test</scope>
+	</dependency>
+  </dependencies>
+  
+</project>

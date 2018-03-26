@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+  <parameter name="testdate" value="我是参数值"/>
+  <test name="Default test" verbose="2">
+ <!--  <groups>
+        <define name="submodule1"></define>
+        <define name="submodule2"></define>
+        <define name="submodule3"></define>
+        
+        <define name="module1">
+            <include name="submodule1"/>
+            <include name="submodule2"/>
+        </define>
+        
+        <define name="module2">
+            <include name="submodule2"/>
+            <include name="submodule3"/>
+        </define>
+        只运行module1
+        <run>
+            <include name="module1"></include>
+        </run>
+    </groups> -->
+    
+    <classes>
+      <class name="Demo_test.kerr.learn"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
