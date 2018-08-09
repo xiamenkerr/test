@@ -5,7 +5,7 @@
   <groupId>Demo-test</groupId>
   <artifactId>kerr</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>kerr</name>
   <url>http://maven.apache.org</url>
@@ -88,6 +88,12 @@
 		<version>6.10</version>
 		<scope>test</scope>
 	</dependency>
+	<dependency>
+    	<groupId>org.xerial</groupId>
+    	<artifactId>sqlite-jdbc</artifactId>
+    	<version>3.8.7</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.javacsv/javacsv -->
   </dependencies>
   
 </project>

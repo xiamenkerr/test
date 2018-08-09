@@ -19,7 +19,7 @@ public class learn {
 		System.out.println("这是Test3");
 	}*/
 	
-	@Parameters({"testdate1"})
+	@Parameters({"testdate"})
 	@Test
 	public void test(@Optional("我是默认的参数") String testdate) {
 		System.out.println(testdate);

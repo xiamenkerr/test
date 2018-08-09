@@ -8,4 +8,5 @@ public interface CreatMerchant_xpath {
 	String phone="phone";
 	String email="email";
 	String savebut="savebut";
+
 }
